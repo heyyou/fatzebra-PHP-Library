@@ -392,6 +392,17 @@ class Gateway {
     }
 
     /**
+     * Delete token
+     * @param string $card_token the card token to delete
+     * @return \stdClass
+     */
+    public function deleteToken($card_token) {
+        if(is_null($card_token) || (strlen($card_token) === 0)) throw new \InvalidArgumentException("Card token is a required field");
+
+        return $this->do_request("DELETE", "/credit_cards/" . $card_token);
+    }
+
+    /**
      * Create a new customer for recurring subscriptions
      * @param string $first_name the customers first name
      * @param string $last_name the customers last name
