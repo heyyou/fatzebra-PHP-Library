@@ -33,7 +33,7 @@ class Gateway {
     /**
      * The sandbox URL of the Fat Zebra gateway
      */
-    public $sandbox_url = "https://d87cr5enii7z.cloudfront.net";
+    public $sandbox_url = "https://gateway.pmnts-sandbox.io";
 
     /**
      * The API version for the requests
